@@ -1,0 +1,61 @@
+(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+    // Add your code here
+    //  E.164 形式判別用
+    var regex = /^\+[1-9]\d{1,14}$/;
+
+    //Noしか書かれていない行は無視する
+    if (source.u_call_template == "") {
+        log.info("Row:" + source.u_snow_no + " is empty.");
+        ignore = true;
+        return;
+    }
+
+    if (source.u_ctype == "DEL" && action == "update") {
+        //消してしまう
+        target.deleteRecord();
+        log.info("Row:" + source.u_snow_no + " is Deleted.");
+        ignore = true;
+    } else if (source.u_ctype == "DEL" && action == "insert") {
+        //削除としてマークされているのにinsertの場合はブロックする
+        log.info("Row:" + source.u_snow_no + " is unknown. Can't delete.");
+        ignore = true;
+    } else if (source.u_ctype == "ADD" && action == "update") {
+        log.info("Row:" + source.u_snow_no + "'s flag is ADD. Can't update.");
+        ignore = true;
+    } else if (source.u_ctype == "ADD" && action == "insert") {
+        //連絡先(電話)の記載がない場合、エラーログに出力
+        if (source.u_number_voice == "") {
+            log.error("Row:" + source.u_snow_no + " 連絡先(電話)の記載がありません。");
+        } else if (!regex.test(source.u_number_voice)) {
+            //連絡先(電話)がE.164 形式にマッチしていない場合、ブロックしエラーをログに出力
+            log.error("Row:" + source.u_snow_no + " 連絡先(電話)`" + source.u_number_voice + "`が E.164 形式にマッチしていません。`+811201112222` や` +819012345678` のような形式で入力してください");
+            ignore = true;
+        } else if (source.u_number_voice.startsWith("+810")) {
+            //連絡先(電話)が "+810" で始まる場合、国内プレフィックス(0)を含んでいるとみなして修正されたことをログに出力
+            log.warn("Row:" + source.u_snow_no + " 連絡先(電話)`" + source.u_number_voice + "`が`+810` から始まる電話番号だったため、国内プレフィックス(0)とみなし `+81` に置換しました。");
+        } else if (source.u_send_sms == "true" && !regex.test(source.u_number_sms)) {
+            //SMS送信がtureかつ連絡先(SMS)がE.164 形式にマッチしていない場合、ブロックしエラーをログに出力
+            log.error("Row:" + source.u_snow_no + " 連絡先(SMS)`" + source.u_number_sms + "`が E.164 形式にマッチしていません。`+811201112222` や` +819012345678` のような形式で入力してください");
+            ignore = true;
+        } else if (source.u_number_sms.startsWith("+810")) {
+            //連絡先(SMS)が "+810" で始まる場合、国内プレフィックス(0)を含んでいるとみなして修正されたことをログに出力
+            log.warn("Row:" + source.u_snow_no + " 連絡先(SMS)`" + source.u_number_sms + "`が`+810` から始まる電話番号だったため、国内プレフィックス(0)とみなし `+81` に置換しました。");
+        }
+        //正しい挙動として何もしない
+    } else if (source.u_ctype == "MOD" && action == "update") {
+        //正しい挙動として何もしない
+    } else if (source.u_ctype == "MOD" && action == "insert") {
+        //変更としてマークされているのにinsertの場合はブロックする
+        log.info("Row:" + source.u_snow_no + " is unknown. Can't insert.");
+        ignore = true;
+    } else if (source.u_ctype == "" && action == "update") {
+        //updateになってるけどフラグなしの場合何も起きないので何もしない
+        log.info("Row:" + source.u_snow_no + " is Skiped.");
+        ignore = true;
+    } else if (source.u_ctype == "" && action == "insert") {
+        //flagが立ってないインサートは認めない
+        log.info("Row:" + source.u_snow_no + "'s flag is empty. Can't insert.");
+        ignore = true;
+    }
+})(source, map, log, target);
