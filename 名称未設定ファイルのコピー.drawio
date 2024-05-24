@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-23T12:38:46.050Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="YKU40TnjcOrxGIj-7KbM" version="24.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-24T07:23:27.388Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="oUsiFqMyWZJiQrW2VdNc" version="24.4.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1646" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1372" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -261,7 +261,7 @@
             <mxPoint x="1059.75" y="1030" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2mDtFI1RQfnua4v-2vq--77" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1" target="2mDtFI1RQfnua4v-2vq--78" source="2mDtFI1RQfnua4v-2vq--60">
+        <mxCell id="2mDtFI1RQfnua4v-2vq--77" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2mDtFI1RQfnua4v-2vq--60" target="2mDtFI1RQfnua4v-2vq--78" edge="1">
           <mxGeometry x="0.4839" y="20" relative="1" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="1110" y="960" as="sourcePoint" />
@@ -279,26 +279,6 @@
             <mxPoint as="offset" />
             <mxPoint x="1199.99" y="1070" as="sourcePoint" />
             <mxPoint x="1199.99" y="1110" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="RLP9D0tRmc307p2vmJPb-0" value="No" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="0.3333" y="20" relative="1" as="geometry">
-            <mxPoint as="offset" />
-            <mxPoint x="1290" y="960" as="sourcePoint" />
-            <mxPoint x="1380" y="1000" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="RLP9D0tRmc307p2vmJPb-2" value="source.u_send_sms == &quot;false&quot; &amp;amp;&amp;amp; source.u_number_sms != &quot;&quot;" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=8;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1330" y="1000" width="100" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="RLP9D0tRmc307p2vmJPb-3" value="SMSを送信がtrueではないのにデータがある場合インサートされないことをログに出力" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1320" y="1120" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RLP9D0tRmc307p2vmJPb-4" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RLP9D0tRmc307p2vmJPb-2" target="RLP9D0tRmc307p2vmJPb-3">
-          <mxGeometry x="0.0476" y="10" relative="1" as="geometry">
-            <mxPoint as="offset" />
-            <mxPoint x="1339.99" y="1150" as="sourcePoint" />
-            <mxPoint x="1339.99" y="1190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
