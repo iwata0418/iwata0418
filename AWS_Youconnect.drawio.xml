@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.12">
   <diagram name="ページ1" id="Uxjpkjm80ZWDSXFeTXdA">
-    <mxGraphModel dx="1434" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2261" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -63,7 +63,7 @@
         <mxCell id="gUU_AARoziC5rCuHC49u-40" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" parent="gUU_AARoziC5rCuHC49u-1" source="gUU_AARoziC5rCuHC49u-19" target="gUU_AARoziC5rCuHC49u-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gUU_AARoziC5rCuHC49u-41" value="レコード（テーブルなど）読み取り&lt;div&gt;着信先電話番号と案件の紐づけ取得&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="gUU_AARoziC5rCuHC49u-40" vertex="1" connectable="0">
+        <mxCell id="gUU_AARoziC5rCuHC49u-41" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;レコード（テーブルなど）読み取り&lt;/font&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;着信先電話番号と案件の紐づけ取得&lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="gUU_AARoziC5rCuHC49u-40" vertex="1" connectable="0">
           <mxGeometry x="-0.4098" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -119,7 +119,7 @@
         <mxCell id="gUU_AARoziC5rCuHC49u-38" value="DynamoDB&lt;div&gt;&lt;div&gt;tel_relation&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="gUU_AARoziC5rCuHC49u-1" vertex="1">
           <mxGeometry x="839" y="513" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="gUU_AARoziC5rCuHC49u-39" value="&lt;div&gt;マージした文章を&lt;/div&gt;dynamodbへ書き込み&lt;div&gt;stateテーブル更新&lt;/div&gt;" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" parent="gUU_AARoziC5rCuHC49u-1" source="gUU_AARoziC5rCuHC49u-18" target="gUU_AARoziC5rCuHC49u-7" edge="1">
+        <mxCell id="gUU_AARoziC5rCuHC49u-39" value="&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;マージした文章を&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;DynamoDBへ書き込み&lt;/font&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;stateテーブル更新(marge)&lt;/font&gt;&lt;/div&gt;" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" parent="gUU_AARoziC5rCuHC49u-1" source="gUU_AARoziC5rCuHC49u-18" target="gUU_AARoziC5rCuHC49u-7" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -134,25 +134,28 @@
         <mxCell id="gUU_AARoziC5rCuHC49u-62" value="S3イベントから&lt;div&gt;音声ファイルの&lt;div&gt;jsonを取得&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="gUU_AARoziC5rCuHC49u-1" vertex="1">
           <mxGeometry x="329" y="20" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="gUU_AARoziC5rCuHC49u-59" value="json形式で&lt;div&gt;AmazonConnectの&lt;div&gt;録音音声データを保存&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="gUU_AARoziC5rCuHC49u-1" vertex="1">
-          <mxGeometry x="110" y="20" width="140" height="60" as="geometry" />
+        <mxCell id="gUU_AARoziC5rCuHC49u-59" value="&lt;div&gt;AmazonConnectの&lt;div&gt;録音音声データを保存&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="gUU_AARoziC5rCuHC49u-1" vertex="1">
+          <mxGeometry x="110" y="40" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="taPaQmoLoTeui2Eg4MFu-3" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;フロー&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;queue customer_案件名&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Lambdaを呼び出す&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="gUU_AARoziC5rCuHC49u-1">
-          <mxGeometry x="4" y="170" width="150" height="60" as="geometry" />
+        <mxCell id="taPaQmoLoTeui2Eg4MFu-3" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;フロー&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;queue customer_案件名)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;でLambdaを呼び出す&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="gUU_AARoziC5rCuHC49u-1">
+          <mxGeometry x="-1" y="170" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="taPaQmoLoTeui2Eg4MFu-7" value="分割した&lt;div&gt;音声ファイルを&lt;/div&gt;&lt;div&gt;S3に保存&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="gUU_AARoziC5rCuHC49u-1">
           <mxGeometry x="520" y="20" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="taPaQmoLoTeui2Eg4MFu-8" value="&lt;span style=&quot;background-color: initial;&quot;&gt;受電情報ファイルの&lt;/span&gt;&lt;div&gt;&lt;div&gt;jsonを書き込み&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 11px; background-color: rgb(255, 255, 255);&quot;&gt;stateテーブル更新（split）&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="gUU_AARoziC5rCuHC49u-1">
+        <mxCell id="taPaQmoLoTeui2Eg4MFu-8" value="&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;受電情報ファイルの&lt;/font&gt;&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;jsonを書き込み&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;stateテーブル更新(split)&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="gUU_AARoziC5rCuHC49u-1">
           <mxGeometry x="404" y="158" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="taPaQmoLoTeui2Eg4MFu-11" value="分割した&lt;div&gt;音声ファイルから&lt;/div&gt;&lt;div&gt;文字起こしを実行&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="gUU_AARoziC5rCuHC49u-1">
           <mxGeometry x="915" y="20" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="taPaQmoLoTeui2Eg4MFu-13" value="文字起こしされた文章を&lt;div&gt;DynamoDBへ書き込み&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;stateテーブル更新(&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;transcribe&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="gUU_AARoziC5rCuHC49u-1">
+          <mxGeometry x="589" y="208" width="180" height="60" as="geometry" />
+        </mxCell>
         <mxCell id="gUU_AARoziC5rCuHC49u-45" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="gUU_AARoziC5rCuHC49u-18" target="gUU_AARoziC5rCuHC49u-48" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gUU_AARoziC5rCuHC49u-47" value="要約の依頼&lt;br&gt;プロンプトの支持" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="gUU_AARoziC5rCuHC49u-45" vertex="1" connectable="0">
+        <mxCell id="gUU_AARoziC5rCuHC49u-47" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;要約の依頼&lt;br&gt;プロンプトの支持&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="gUU_AARoziC5rCuHC49u-45" vertex="1" connectable="0">
           <mxGeometry x="-0.0608" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -166,7 +169,7 @@
         <mxCell id="gUU_AARoziC5rCuHC49u-53" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,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;" parent="1" vertex="1">
           <mxGeometry x="1286.5" y="400" width="80" height="66.67" as="geometry" />
         </mxCell>
-        <mxCell id="gUU_AARoziC5rCuHC49u-55" value="&lt;div&gt;架電情報と&lt;/div&gt;&lt;div&gt;マージした文字起こし結果を&lt;/div&gt;レコードに書き込み" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="gUU_AARoziC5rCuHC49u-18" target="gUU_AARoziC5rCuHC49u-53" edge="1">
+        <mxCell id="gUU_AARoziC5rCuHC49u-55" value="&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;架電情報と&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;マージした文字起こし結果を&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;レコードに書き込み&lt;/font&gt;" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="gUU_AARoziC5rCuHC49u-18" target="gUU_AARoziC5rCuHC49u-53" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="gUU_AARoziC5rCuHC49u-58" value="ServiceNow" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
